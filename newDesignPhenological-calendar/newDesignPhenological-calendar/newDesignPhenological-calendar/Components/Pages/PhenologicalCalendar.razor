@@ -5,30 +5,33 @@
 
 
 <PageTitle>Вырастим вместе</PageTitle>
-
-<div class="px-4 py-5 my-3 text-center" style="padding: 24px;">
-    <div class="d-block mx-auto mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="57" fill="currentColor" class="bi bi-calendar-week-fill" viewBox="0 0 16 16">
-            <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2M9.5 7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5m3 0h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5M2 10.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
-        </svg>
-    </div>
-    <h1 class="display-5 fw-bold text-body-emphasis">Фенологический календарь</h1>
-    
-    <footer class="text-body-secondary"></footer>
-    <div class="col-lg-6 mx-auto"> 
-        <div style=""><p class="lead mb-4">Внимание! Это Бета-версия сайта, предназначенная для тестирования. Она не отображает финального качества продукта. Спасибо за понимание и поддержку. Удачи!</p></div>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<div class="background-video">
+    <video src="video/14035104-hd_1920_1080_30fps.mp4" autoplay muted loop id="background-video"></video>
+    <div class="px-4 py-5 my-3 text-center" style="padding: 24px; color: white;">
+        <div class="d-block mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="57" fill="currentColor" class="bi bi-calendar-week-fill" viewBox="0 0 16 16">
+                <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2M9.5 7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5m3 0h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5M2 10.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"/>
+            </svg>
         </div>
-    </div> 
-</div>
+        <h1 class="display-5 fw-bold text-body-emphasis">Фенологический календарь</h1>
 
-<div class="bg-image-search" style="background-image: url(@linkImg);">
+        <footer class="text-body-secondary"></footer>
+        <div class="col-lg-6 mx-auto">
+            <div style="">
+                <p class="lead mb-4">Внимание! Это Бета-версия сайта, предназначенная для тестирования. Она не отображает финального качества продукта. Спасибо за понимание и поддержку. Удачи!</p></div>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+<div style="background-color: rgba(211, 211, 211, 0.5); z-index: 2; margin-left: -24px; margin-right: -24px; margin-top: 112px; margin-bottom: -30px;">
     <div class="container py-4">
-        <div class="p-5 mb-4 bg-body-tertiary-theory rounded-3 " style="background-color: rgba(211, 211, 211, 0.9); border-radius: 15px;">
+        <div class="p-5 mb-4 rounded-3" style="background-color: rgba(211, 211, 211, 0.9);">
             <div class="container-fluid py-5">
                 <div class="parent d-flex">
                     <input class="form-control me-2" type="text" id="searchString" @bind="searchText" placeholder="Введите название вредителя" @oninput="popit">
-                    <a >
+                    <a>
                         <button class="btn btn-outline-success" type="submit" @onclick="popit">Найти</button>
                     </a>
                 </div>
@@ -47,7 +50,7 @@
             </div>
         </div>
     </div>
-</div>
+
 
 @code {
 
@@ -99,7 +102,7 @@
 
 <style>
     .search-form-container {
-        display: flex;
+        position: absolute;
         align-items: center;
         justify-content: center;
         margin-bottom: 1rem;
@@ -114,55 +117,67 @@
     button {
         padding: 10px 20px;
     }
+            #background-video {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
 </style>
 
-<div>
-    <div class="px-4 pt-5 my-5 text-center border-bottom">
-        <h1 class="display-4 fw-bold text-body-emphasis">Рассчитать фенологический календарь</h1>
+
+<div style="background: rgba(255, 255, 255, 0.4); z-index: 2; margin-left: -24px; margin-right: -24px; margin-top: 112px; margin-bottom: -30px;">
+    <div>
         
-        <EditForm Model="@dateModel" OnValidSubmit="@HandleSearch">
-            <DataAnnotationsValidator />
-            <ValidationSummary />
-            <div class="date-form-container">
-                <div class="date-form">
-                    <div class="search-form-container">
-                        <InputSelect @bind-Value="dateModel.Month" class="month-dropdown" disabled="@(isPestFound ? false : true)">
-                            <option value="">Выберите месяц</option>
-                            @foreach (var month in months)
-                            {
-                                <option value="@month">@month</option>
-                            }
-                        </InputSelect>
-                        <button @onclick="HandleSearch" class="btn btn-primary" disabled="@(isPestFound ? false : true)">Рассчитать</button>
+        <div class="px-4 pt-5 my-5 text-center border-bottom">
+            <h1 class="display-4 fw-bold text-body-emphasis">Рассчитать фенологический календарь</h1>
+
+            <EditForm Model="@dateModel" OnValidSubmit="@HandleSearch">
+                <DataAnnotationsValidator/>
+                <ValidationSummary/>
+                <div class="date-form-container">
+                    <div class="date-form">
+                        <div class="search-form-container">
+                            <InputSelect @bind-Value="dateModel.Month" class="month-dropdown" disabled="@(isPestFound ? false : true)">
+                                <option value="">Выберите месяц</option>
+                                @foreach (var month in months)
+                                {
+                                    <option value="@month">@month</option>
+                                }
+                            </InputSelect>
+                            <button @onclick="HandleSearch" class="btn btn-primary" disabled="@(isPestFound ? false : true)">Рассчитать</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </EditForm>
+            </EditForm>
 
-        <!-- Спиннер загрузки -->
-        @if (isLoading)
-        {
-            <div class="loading-spinner">
-                <p>Загрузка...</p>
-                <!-- Можно использовать библиотеку спиннеров или кастомный CSS -->
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
+            <!-- Спиннер загрузки -->
+            @if (isLoading)
+            {
+                <div class="loading-spinner">
+                    <p>Загрузка...</p>
+                    <!-- Можно использовать библиотеку спиннеров или кастомный CSS -->
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
                 </div>
-            </div>
-        }
-     
-        @if (selectedMonthName != null && dataList != null && !isLoading)
-        {
-            <h4>Результаты для месяца: @selectedMonthName</h4>
-            <div style="display: flex; justify-content: center;">
-                <table class="table" style="width: 80%; max-width: 800px; border-collapse: collapse;">
-                    <thead>
+            }
+
+            @if (selectedMonthName != null && dataList != null && !isLoading)
+            {
+                <h4>Результаты для месяца: @selectedMonthName</h4>
+                <div style="display: flex; justify-content: center;">
+                    <table class="table" style="width: 80%; max-width: 800px; border-collapse: collapse;">
+                        <thead>
                         <tr>
                             <th style="padding: 8px; border: 1px solid #ddd;">День</th>
                             <th style="padding: 8px; border: 1px solid #ddd;">Этап</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         @for (int i = 0; i < dataList.Count; i++)
                         {
                             var data = dataList[i];
@@ -171,48 +186,48 @@
                                 <td style="padding: 8px; border: 1px solid #ddd;">
                                     @if (data.Stage == 1)
                                     {
-                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
-                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
+                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;"/>
+                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;"/>
                                         <p>Личинка / Имаго @data.Stage</p>
                                     }
                                     else if (data.Stage == 2)
                                     {
-                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
-                                        <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;" />
+                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;"/>
+                                        <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;"/>
                                         <p>Имаго / Яйцо @data.Stage</p>
                                     }
                                     else if (data.Stage == 3)
                                     {
-                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
-                                        <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;" />
-                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
+                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;"/>
+                                        <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;"/>
+                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;"/>
                                         <p>Имаго / Яйцо / Личинка @data.Stage</p>
                                     }
                                     else if (data.Stage == 4)
                                     {
-                                        <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;" />
-                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
-                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
+                                        <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;"/>
+                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;"/>
+                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;"/>
                                         <p>Яйцо / Личинка / Имаго @data.Stage</p>
                                     }
                                     else if (data.Stage == 5)
                                     {
-                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
-                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
-                                        <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;" />
+                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;"/>
+                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;"/>
+                                        <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;"/>
                                         <p>Личинка / Имаго / Яйцо @data.Stage</p>
                                     }
                                     else if (data.Stage == 6)
                                     {
-                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
-                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
-                                        <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;" />
+                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;"/>
+                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;"/>
+                                        <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;"/>
                                         <p>Имаго/ Личинка / Яйцо @data.Stage</p>
                                     }
                                     else if (data.Stage == 7)
                                     {
-                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
-                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
+                                        <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;"/>
+                                        <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;"/>
                                         <p>Имаго / Личинка @data.Stage</p>
                                     }
                                     else
@@ -222,70 +237,75 @@
                                 </td>
                             </tr>
                         }
-                    </tbody>
-                </table>
-            </div>
-        }
-           
-        @code {
-            private DateModel dateModel = new DateModel();
-            private string selectedMonthName;
-            private string searchText; // Название вредителя
-            private List<DataService.DayData> dataList = new List<DataService.DayData>(); // Инициализация
-            private bool isLoading = false; // Переменная для отслеживания состояния загрузки
-
-            private List<string> months = new List<string>
-            {
-                "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
-            };
-
-            private async Task HandleSearch()
-            {
-                isLoading = true; // Начало загрузки
-                StateHasChanged(); // Обновляем UI, чтобы показать спиннер
-
-                // Искусственная задержка для имитации долгой загрузки
-                await Task.Delay(1000); // 2000 миллисекунд = 2 секунды
-
-                if (months.Contains(dateModel.Month))
-                {
-                    selectedMonthName = dateModel.Month;
-                    // Приведение пользовательского ввода к нижнему регистру и удаление пробелов
-                    string cleanedTableName = searchText.Replace(" ", "").ToLower();
-
-                    // Вызов метода DataService с передачей очищенного названия вредителя и месяца
-                    dataList = await dataService.GetDataByTableAsync(cleanedTableName, selectedMonthName) ?? new List<DataService.DayData>();
-                }
-                else
-                {
-                    Console.WriteLine("Неправильный месяц");
-                }
-
-                isLoading = false; // Окончание загрузки
-                StateHasChanged(); // Обновляем UI, чтобы скрыть спиннер и показать результаты
+                        </tbody>
+                    </table>
+                </div>
             }
 
-            public class DateModel
-            {
-                [Required(ErrorMessage = "Месяц обязателен")]
-                public string Month { get; set; }
+            @code {
+                private DateModel dateModel = new DateModel();
+                private string selectedMonthName;
+                private string searchText; // Название вредителя
+                private List<DataService.DayData> dataList = new List<DataService.DayData>(); // Инициализация
+                private bool isLoading = false; // Переменная для отслеживания состояния загрузки
+
+                private List<string> months = new List<string>
+                {
+                    "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+                };
+
+                private async Task HandleSearch()
+                {
+                    isLoading = true; // Начало загрузки
+                    StateHasChanged(); // Обновляем UI, чтобы показать спиннер
+
+                    // Искусственная задержка для имитации долгой загрузки
+                    await Task.Delay(1000); // 2000 миллисекунд = 2 секунды
+
+                    if (months.Contains(dateModel.Month))
+                    {
+                        selectedMonthName = dateModel.Month;
+                        // Приведение пользовательского ввода к нижнему регистру и удаление пробелов
+                        string cleanedTableName = searchText.Replace(" ", "").ToLower();
+
+                        // Вызов метода DataService с передачей очищенного названия вредителя и месяца
+                        dataList = await dataService.GetDataByTableAsync(cleanedTableName, selectedMonthName) ?? new List<DataService.DayData>();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Неправильный месяц");
+                    }
+
+                    isLoading = false; // Окончание загрузки
+                    StateHasChanged(); // Обновляем UI, чтобы скрыть спиннер и показать результаты
+                }
+
+                public class DateModel
+                {
+                    [Required(ErrorMessage = "Месяц обязателен")]
+                    public string Month { get; set; }
+                }
+
             }
-        }
+
+        </div>
     </div>
 </div>
 
 
+</div>
 
 <footer class="pt-3 mt-4 text-body-secondary border-top">
-<p align="center" style="font-size: 10px;">
-    <br>
-    Все права защищены. Авторы проекта не несут ответственности
-    за точность расчета фенологического календаря и за возможные негативные<br>
-    последствия, возникшие при использовании информации с сайта.
-    Прогностическая информация на сайте носит исключительно<br>
-    ознакомительный характер и ее перепечатка в СМИ запрещена.
-    Для принятия решений необходимо руководствоваться официальными<br>
-    расчетами фенологического календаря.  © 2024 <br>
+    <p align="center" style="font-size: 10px;">
+        <br>
+        Все права защищены. Авторы проекта не несут ответственности
+        за точность расчета фенологического календаря и за возможные негативные<br>
+        последствия, возникшие при использовании информации с сайта.
+        Прогностическая информация на сайте носит исключительно<br>
+        ознакомительный характер и ее перепечатка в СМИ запрещена.
+        Для принятия решений необходимо руководствоваться официальными<br>
+        расчетами фенологического календаря.  © 2024 <br>
 
-</p>
+    </p>
 </footer>
+</div>

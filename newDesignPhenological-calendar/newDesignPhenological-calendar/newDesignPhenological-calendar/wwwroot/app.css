@@ -217,7 +217,7 @@ body {
 
 .text-bg-dark {
     color: #fff;
-    background-color: #008000;
+    /*background-color: #008000;*/
     box-shadow: 0 0 0px #000;
     transition: transform 0.2s;
 }
