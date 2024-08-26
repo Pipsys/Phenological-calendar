@@ -23,15 +23,13 @@
     </div> 
 </div>
 
-
-
 <div class="bg-image-search" style="background-image: url(@linkImg);">
     <div class="container py-4">
         <div class="p-5 mb-4 bg-body-tertiary-theory rounded-3" style="background-color: rgba(211, 211, 211, 0.9); border-radius: 15px;">
             <div class="container-fluid py-5">
                 <div class="d-flex justify-content-center align-items-center mb-4">
                     <div class="d-flex align-items-center">
-                        <div class="me-2 blazored-typeahead__controls" style="max-width: 500px; flex-grow: 1;">
+                        <div class="me-2" style="max-width: 500px; flex-grow: 1;">
                             <BlazoredTypeahead
                                 SearchMethod="AutoSearch"
                                 @bind-Value="SelectedPests"
@@ -221,47 +219,47 @@
                                     {
                                         <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
                                         <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
-                                        <p>Личинка / Имаго @data.Stage</p>
+                                        <p>Личинка / Имаго </p>
                                     }
                                     else if (data.Stage == 2)
                                     {
                                         <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
                                         <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;" />
-                                        <p>Имаго / Яйцо @data.Stage</p>
+                                        <p>Имаго / Яйцо </p>
                                     }
                                     else if (data.Stage == 3)
                                     {
                                         <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
                                         <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;" />
                                         <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
-                                        <p>Имаго / Яйцо / Личинка @data.Stage</p>
+                                        <p>Имаго / Яйцо / Личинка </p>
                                     }
                                     else if (data.Stage == 4)
                                     {
                                         <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;" />
                                         <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
                                         <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
-                                        <p>Яйцо / Личинка / Имаго @data.Stage</p>
+                                        <p>Яйцо / Личинка / Имаго </p>
                                     }
                                     else if (data.Stage == 5)
                                     {
                                         <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
                                         <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
                                         <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;" />
-                                        <p>Личинка / Имаго / Яйцо @data.Stage</p>
+                                        <p>Личинка / Имаго / Яйцо </p>
                                     }
                                     else if (data.Stage == 6)
                                     {
                                         <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
                                         <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
                                         <img src="img/Egg.png" alt="Stage 2" style="width: 40px; height: 40px;" />
-                                        <p>Имаго/ Личинка / Яйцо @data.Stage</p>
+                                        <p>Имаго/ Личинка / Яйцо </p>
                                     }
                                     else if (data.Stage == 7)
                                     {
                                         <img src="img/Imago.png" alt="Stage 1" style="width: 40px; height: 40px;" />
                                         <img src="img/Larva.png" alt="Stage 3" style="width: 40px; height: 40px;" />
-                                        <p>Имаго / Личинка @data.Stage</p>
+                                        <p>Имаго / Личинка </p>
                                     }
                                     else
                                     {
