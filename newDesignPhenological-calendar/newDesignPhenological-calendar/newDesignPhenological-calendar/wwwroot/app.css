@@ -344,25 +344,6 @@ body {
     padding: 10px;
 }
 
-/-----Дата----/
-
-.form-control {
-    display: block;
-    width: 10px;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--bs-body-color);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: var(--bs-body-bg);
-    background-clip: padding-box;
-    border: var(--bs-border-width) solid var(--bs-border-color);
-    border-radius: var(--bs-border-radius);
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
 
 .input-group {
     position: relative;
@@ -372,22 +353,7 @@ body {
     width: 50px;
 }
 
-.dropdown-header {
-    display: block;
-    padding: var(--bs-dropdown-header-padding-y) var(--bs-dropdown-header-padding-x);
-    margin-bottom: 0;
-    font-size: .875rem;
-    color: var(--bs-dropdown-header-color);
-    white-space: nowrap;
-}
 
-.dropdown-divider {
-    height: 0;
-    margin: var(--bs-dropdown-divider-margin-y) 0;
-    overflow: hidden;
-    border-top: 1px solid var(--bs-dropdown-divider-bg);
-    opacity: 1;
-}
 
 .date-form-container {
     text-align: center;
